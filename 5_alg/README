@@ -50,3 +50,53 @@ Use Scanner to read in all information as if it were coming from the keyboard.
 Print all information to the console using standard output (System.out.print() or System.out.println()).
 
 Outputs must be exact (exact spaces and casing).
+
+
+
+
+
+
+
+
+
+
+
+Formato de entrada
+
+Cada línea del archivo de entrada comenzará con una operación (S o C) seguida de un punto y coma, seguida de M, C o V seguida de un punto y coma, seguida de las palabras en las que necesitarás operar.
+
+La operación será S (dividir) o C (combinar).
+
+M indica método, C indica clase y V indica variable.
+
+En el caso de una operación de división, las palabras serán un nombre de método, clase o variable en camel case que deberás dividir en una lista de palabras separadas por espacios que comiencen con una letra minúscula.
+
+En el caso de una operación de combinación, las palabras serán una lista de palabras separadas por espacios que comiencen con letras minúsculas que deberás combinar en el String camel case apropiado. 
+
+Los métodos deben terminar con un conjunto vacío de paréntesis para diferenciarlos de los nombres de variables.
+
+
+# CamelCase: en este estilo, cada palabra comienza con una letra mayúscula, excepto la primera palabra. Por ejemplo: miVariableEjemplo.
+
+
+
+
+
+
+
+length: devuelve la longitud de la cadena de texto.
+charAt(index): devuelve el carácter en la posición especificada.
+concat(str1, str2, ..., strN): combina dos o más cadenas de texto.
+indexOf(substring): devuelve la posición del primer carácter de la subcadena en la cadena de texto.
+lastIndexOf(substring): devuelve la posición del último carácter de la subcadena en la cadena de texto.
+startsWith(prefix): devuelve true si la cadena de texto comienza con el prefijo especificado, de lo contrario devuelve false.
+endsWith(suffix): devuelve true si la cadena de texto termina con el sufijo especificado, de lo contrario devuelve false.
+substring(startIndex, endIndex): devuelve una subcadena de la cadena de texto, desde la posición especificada hasta la posición especificada.
+slice(startIndex, endIndex): devuelve una subcadena de la cadena de texto, desde la posición especificada hasta la posición especificada.
+replace(searchValue, replaceValue): reemplaza el primer valor de búsqueda encontrado en la cadena de texto con el valor de reemplazo especificado.
+toUpperCase(): convierte la cadena de texto a mayúsculas.
+toLowerCase(): convierte la cadena de texto a minúsculas.
+trim(): elimina los espacios en blanco al principio y al final de la cadena de texto.
+split(separator): divide la cadena de texto en una matriz de subcadenas en función del separador especificado.
+
+
