@@ -29,9 +29,9 @@ function processData(input) {
                     // finalmente borrar los paréntesisi del método.
 
                     if(new_str[i] === new_str[i].toUpperCase() && new_str[i] !== '(' && new_str[i] !== ')'){
-                        str = ' '+new_str[i];
-                        str.toLowerCase();
-                        console.log(str);
+                        str = new_str[i].toLowerCase();
+                        new_line += ' '+str;
+                        console.log(new_line);
                     }else {
                         new_line += new_str[i];
                     }
