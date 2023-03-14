@@ -8,7 +8,6 @@ function processData(input) {
     const arr = input.split('\r\n');
     const final_arr = [];
     let new_line = '';
-    console.log(`Array after split: ${arr}\n`);
 
     arr.forEach(key => {
 
@@ -18,30 +17,27 @@ function processData(input) {
 
             if (key[2] === 'M'){
 
-                console.log('Frase nativa ------  ',key);
-                new_str = key.toString().substring(4);
+                new_str = key.toString().substring(4).split('');
+                new_str.splice(new_str.length - 2, 2);
                 let str = '';
 
-                for (let i = 0; i < new_str.length; i++) {
+                new_str.forEach((key,index) => {
 
-                    // Validar si existe una letra en mayúscula, encontrar el index, cambiar la letra
-                    // mayúsucula por minúscula e incertar un espacio en la posición anterior para
-                    // finalmente borrar los paréntesisi del método.
-
-                    if(new_str[i] === new_str[i].toUpperCase() && new_str[i] !== '(' && new_str[i] !== ')'){
-                        str = new_str[i].toLowerCase();
-                        new_line += ' '+str;
-                        console.log(new_line);
+                    if(key === key.toUpperCase()){
+                        str = key.toLowerCase();
+                        new_line += ' ';
+                        new_line += str;
                     }else {
-                        new_line += new_str[i];
+                        new_line += key;
                     }
-                    
-                }
+                });
+
                 
             }else if (key[2] === 'C'){
 
                 new_str = key.toString().substring(4);           
                 for (let i = 0; i < new_str.length; i++) {
+                    
                     if(new_str[i] === new_str[i].toUpperCase()){
                         if (i === 0) {
                             new_line += new_str[i].toLowerCase();
@@ -55,8 +51,8 @@ function processData(input) {
             }else if (key[2] === 'V'){
 
                 new_str = key.toString().substring(4);
-           
                 for (let i = 0; i < new_str.length; i++) {
+
                     if(new_str[i] === new_str[i].toUpperCase()){
                         if (i === 0) {
                             new_line += new_str[i].toLowerCase();
@@ -77,6 +73,7 @@ function processData(input) {
                 
                 new_str = key.substring(4).split(' ');
                 for (let i = 0; i < new_str.length; i++) {
+                    
                     if (i === 0){
                         new_line = new_str[i];
                     }else {
@@ -102,10 +99,10 @@ function processData(input) {
 
                 new_str = key.toString().substring(4).split(' ');                 
                 for (let i = 0; i < new_str.length; i++) {
+
                     if (i === 0){
                         new_line += new_str[i];
-                    }else {
-                        
+                    }else {                        
                         str = new_str[i][0].toUpperCase();
                         str += new_str[i].substring(1);
                         new_line += str;
